@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a56">
+  <title>AIEdu — Zamonaviy ta’lim platformasi</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/"><span class="brand-icon">✦</span> AIEdu</a>
+  <nav><a href="#courses">Kurslar</a><a href="#features">Imkoniyatlar</a><a href="#account">Kirish</a></nav>
+  <span id="serverState" class="status">Tekshirilmoqda…</span>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">BARCHA UCHUN ZAMONAVIY TA’LIM</span>
+      <h1>Bilim olishning <span>yangi imkoniyatlari.</span></h1>
+      <p>Maktab, kollej, universitet va mustaqil o‘rganuvchilar uchun yagona raqamli ta’lim maydoni.</p>
+      <div class="actions"><a class="btn primary" href="#courses">Kurslarni ko‘rish →</a><a class="btn ghost" href="#account">Hisob yaratish</a></div>
+    </div>
+    <div class="hero-card"><div class="orb">✦</div><h3>AI ta’lim yordamchisi</h3><p>Savollaringizga tushunarli izohlar, mashqlar va o‘rganish yo‘riqnomalari.</p><div class="mini-row"><span>✓ Shaxsiy kabinet</span><span>✓ Testlar</span><span>✓ Kurslar</span></div></div>
+  </section>
+  <section id="features" class="features">
+    <article><b>01</b><h3>Har bir bosqich uchun</h3><p>Maktabdan universitetgacha va mustaqil ta’lim.</p></article>
+    <article><b>02</b><h3>Bilimni tekshirish</h3><p>Testlar va natijalar bilan o‘z rivojingizni kuzating.</p></article>
+    <article><b>03</b><h3>AI yordamchi</h3><p>Murakkab mavzularni sodda tilda tushunib oling.</p></article>
+  </section>
+  <section id="courses" class="section">
+    <div class="section-head"><div><span class="eyebrow">O‘RGANISHNI BOSHLANG</span><h2>Ommabop kurslar</h2></div><span id="courseCount" class="muted"></span></div>
+    <div id="courseList" class="course-grid"><div class="skeleton">Kurslar yuklanmoqda…</div></div>
+  </section>
+  <section id="account" class="account-section">
+    <div><span class="eyebrow">SHAXSIY KABINET</span><h2>O‘qishni davom ettiring</h2><p>Ro‘yxatdan o‘ting yoki mavjud hisobingizga kiring.</p></div>
+    <div class="account-card">
+      <div class="tabs"><button class="tab active" data-tab="login">Kirish</button><button class="tab" data-tab="register">Ro‘yxatdan o‘tish</button></div>
+      <form id="authForm">
+        <label id="nameWrap" class="hidden">To‘liq ism<input id="fullName" autocomplete="name"></label>
+        <label>Email<input id="email" type="email" autocomplete="email" required></label>
+        <label>Parol<input id="password" type="password" minlength="8" autocomplete="current-password" required></label>
+        <button class="btn primary full" type="submit" id="authSubmit">Kirish</button>
+      </form>
+      <p id="authMessage" class="message" aria-live="polite"></p>
+      <button id="logoutBtn" class="btn ghost full hidden" type="button">Chiqish</button>
+      <div id="adminArea" class="admin-area hidden"><h3>Admin paneli</h3><p id="adminSummary">Ma’lumot yuklanmoqda…</p><div id="userList"></div></div>
+    </div>
+  </section>
+</main>
+<footer><b>AIEdu</b><span>Ta’lim — kelajak sari eng yaxshi sarmoya.</span><small>© <span id="year"></span> AIEdu</small></footer>
+<script src="/app.js" defer></script>
+</body></html>
