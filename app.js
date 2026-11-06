@@ -1,4 +1,4 @@
-[11/5/2026 9:23 PM] Абдуллаев: const $ = (id) => document.getElementById(id);
+const $ = (id) => document.getElementById(id);
 
 let mode = "login";
 let accessToken = localStorage.getItem("aiedu_token") || "";
@@ -164,7 +164,7 @@ async function loadAdmin() {
 
   try {
     const overview = await api("/api/admin/overview");
-[11/5/2026 9:23 PM] Абдуллаев: $("adminSummary").textContent =
+$("adminSummary").textContent =
       Foydalanuvchilar: ${overview.users} · Kurslar: ${overview.courses} · To‘lov yozuvlari: ${overview.payments};
 
     const { users } = await api("/api/admin/users");
